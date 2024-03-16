@@ -6,5 +6,32 @@ labels: ''
 assignees: ''
 
 ---
+title: Szablon zgłoszenia funkcji
+type: object
+properties:
+  typ:
+    type: string
+    enum:
+      - Component
+      - Idea
+  dane:
+    type: object
+    properties:
+      - component:
+        type: object
+          properties:
+            nazwa_komponentu:
+              type: string
+              description: Nazwa komponentu
+      - idea:
+        type: object
+          properties:
+            opis_idei:
+              type: string
+              description: Opis idei
+            czy_warta_rozważenia:
+              type: boolean
+              description: Czy idea jest warta rozważenia?
+
 
 
