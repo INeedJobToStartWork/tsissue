@@ -1,17 +1,30 @@
----
-name: Custom issue template
-about: Describe this issue template's purpose here.
-title: 'Custom issues'
-labels: ''
-assignees: ''
-
----
-title: Szablon zgłoszenia funkcji  # Replace with your desired title
-type: object
-properties:
-  typ:
-    type: string
-    enum:
-      - Component
-      - Idea
- 
+name: "✨Idea - Feature Request"
+title: "✨[Idea] - <TITLE_OF_ISSUE>"
+description: Share your ideas with us!
+labels: [feature]
+body:
+- type: object
+  properties:
+    typ:
+      type: string
+      enum:
+        - Component
+        - Idea
+    dane:
+      type: object
+      properties:
+        - component:
+          type: object
+            properties:
+              nazwa_komponentu:
+                type: string
+                description: Nazwa komponentu
+        - idea:
+          type: object
+            properties:
+              opis_idei:
+                type: string
+                description: Opis idei
+              czy_warta_rozważenia:
+                type: boolean
+                description: Czy idea jest warta rozważenia?
